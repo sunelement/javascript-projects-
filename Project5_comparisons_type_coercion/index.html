@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Project5_comparisons_type_coercion</title>
+    <script src="/main.js"></script>
+</head>
+<body>
+    <h1>Comparisons, Types and Coercion</h1>
+    <hr />
+    <h3>Using document.write() and "type of"</h3>
+    <p>
+        Checks the type of the operand written on the top of the screen by using "typeof":
+        <button onclick="Type_Of()">Check Type</button>
+        <a id="TypeOf"></a>
+    </p>
+    <h3>Combining A String And Number</h3>
+    <p>
+        Combine a string, "Five", with a number, 3, and determine the result:
+        <button onclick="Combine()">Combine: "Five" + 3</button>
+        <a id="Combine"></a>
+    </p>
+    <h3>Boolean Logic</h3>
+    <p>
+        Double Equals, ==, only checks the value equity, ignoring the type, so the string "5" is equal to the number 5:
+        <button onclick="Double_Equals()">Solve: "5" == 5</button>
+        <a id="DoubleEquals"></a>
+    </p>
+    <p>
+        Triple Equals, ===, checks both value and type equity so the string "5" is not equal to the number 5:
+        <button onclick="Triple_Equals()">Solve: "5" === 5</button>
+        <a id="TripleEquals"></a>
+    </p>
+    <p>
+        Greater than, '>', is used to compare two number values and return true if the left one is larger than the right, false otherwise:
+        <button onclick="Greater()">Solve: (7 > 1)</button>
+        <a id="Greater"></a>
+    </p>
+    <p>
+        Less than, '<', is used to compare two number values and return true if the left one is smaller than the right, false otherwise:
+        <button onclick="Less()">Solve: (6 < 4)</button>
+        <a id="Less"></a>
+    </p>
+    <p>
+        And, &&, is used to check if both statements on ether side of it are true, it only returns true if both are true, false otherwise:
+        <button onclick="And()">Solve: (7 > 1) && (6 < 4)</button>
+        <a id="And"></a>
+    </p>
+    <p>
+        Or, ||, is used to check if ether statements on ether side of it are true, if ether are true it returns true, false otherwise:
+        <button onclick="Or()">Solve: (7 > 1) || (6 < 4)</button>
+        <a id="Or"></a>
+    </p>
+    <p>
+        Not, !, is used to symbolize the switch from truth to falsity and vice versa, it checks the opposite condition:
+        <button onclick="Not()">Solve: !true</button>
+        <a id="Not"></a>
+    </p>
+</body>
+</html>
