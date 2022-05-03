@@ -1,0 +1,28 @@
+/* Centers the contet of the webpage */
+.center-container {
+    width: 608px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Defines the table that will make up the 3 by 3 gride of pickable squares */
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+/* Defines individual squares that can be picked by ether player */
+td {
+    cursor: pointer;
+    border: 4px solid rgba(252, 169, 3, 0.8);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Where objects can be drawn above the other web elements */
+canvas {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}

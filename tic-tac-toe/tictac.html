@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="Width-device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <!-- Links to the CSS style sheet that sets colors and positioning of display -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body id="body">
+    <div class="center-container">
+        <canvas id="win-lines" width="608" height="608"></canvas>
+        <!-- 3 by 3 gride that allows both players to mark a square -->
+        <table>
+            <tr>
+                <td id="0" onclick="placeXOrO('0')"></td>
+                <td id="1" onclick="placeXOrO('1')"></td>
+                <td id="2" onclick="placeXOrO('2')"></td>
+            </tr>
+            <tr>
+                <td id="3" onclick="placeXOrO('3')"></td>
+                <td id="4" onclick="placeXOrO('4')"></td>
+                <td id="5" onclick="placeXOrO('5')"></td>
+            </tr>
+            <tr>
+                <td id="6" onclick="placeXOrO('6')"></td>
+                <td id="7" onclick="placeXOrO('7')"></td>
+                <td id="8" onclick="placeXOrO('8')"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Links to JavaScript, the game's functionality -->
+    <script src="js/main.js"></script>
+</body>
+</html>
