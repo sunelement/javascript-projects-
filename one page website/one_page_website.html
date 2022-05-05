@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>wrappedup</title>
+    <!-- Links to the CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="CSS/one_page_website.css" />
+</head>
+<body>
+    <header>
+        <nav class="NavBar">
+            <a class="NavItem" href="#About">About</a>
+            <a class="NavItem" href="#Gallery">Gallery</a>
+            <a class="NavItem" href="#Contact">Contact</a>
+        </nav>
+        <hr />
+        <h1 id="PageTitle">wrappedup</h1>
+        <hr />
+    </header>
+    <!-- Image Gallery Section -->
+    <section id="Gallery" class="SectionContainer">
+        <hr />
+        <h2 class="SectionHeading">Gallery</h2>
+        <div class="ArtContainer">
+            <div class="row">
+                <div class="colum">
+                    <img class="Piece" src="./images/image1.jpg" alt="purple" onclick="openModal();currentSlide(1)" />
+                </div>
+                <div class="colum">
+                    <img class="Piece" src="./images/image2.jpg" alt="grey" onclick="openModal();currentSlide(2)" />
+                </div>
+                <div class="colum">
+                    <img class="Piece" src="./images/image3.jpg" alt="black" onclick="openModal();currentSlide(3)" />
+                </div>
+				</div>
+            <div class="row">
+                <div class="colum">
+                    <img class="Piece" src="./images/image4.jpg" alt="green" onclick="openModal();currentSlide(4)" />
+                </div>
+                <div class="colum">
+                    <img class="ArtPiece" src="./images/image5.jpg" alt="orange" onclick="openModal();currentSlide(5)" />
+                </div>
+                <div class="colum">
+                    <img class="Piece" src="./images/image6.jpg" alt="red" onclick="openModal();currentSlide(6)" />
+                </div>
+            </div>
+        </div>
+        <!-- The Photo Modal that appears when picture is clicked -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="./images/image1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="./images/image2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="./images/image3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="./images/image4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="./images/image5.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="./images/image6.jpg" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <!-- Displays all photos on the modal -->
+                <div class="column">
+                    <img class="demo cursor" src="./images/image1.jpg" style="width:16%" onclick="currentSlide(1)" alt="purple finish">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/image2.jpg" style="width:16%" onclick="currentSlide(2)" alt="grey finish">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/image3.jpg" style="width:16%" onclick="currentSlide(3)" alt="matte black finish">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/image4.jpg" style="width:16%" onclick="currentSlide(4)" alt="lime green">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/image5.jpg" style="width:16%" onclick="currentSlide(5)" alt="orange">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./images/image6.jpg" style="width:16%" onclick="currentSlide(6)" alt="red">
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+    <!-- Contact Section -->
+    <h2><span>wrap your car today.</span>
+        <br /><em>Get started today!</em> 
+    </h2>
+
+    <p>
+    <em>Please provide us with your contact information.</em>
+    </p>
+    <div>
+        <form action="" method="post">
+            <input class="RSVP" type="text" value="" placeholder="First Name">
+            <input class="RSVP" type="text" value="" placeholder="Last Name">
+            <input class="RSVP" type="text" value="" placeholder="Email Address">
+            <input class="RSVP" type="text" value="" placeholder="Phone Number">
+            <div class="form-spacer">
+                <label class="terms"><Terms and Conditions></label>
+            </div>
+            </div>		
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    <!-- Webpage Footer -->
+    <footer>
+        <hr />
+        <h5>www.wrappedup.com &nbsp; <span>&#124;</span> &nbsp; &copy2021</h5>
+        <hr />
+    </footer>
+    <!-- Links to JavaScript, calculator's functionality -->
+    <script src="js/main.js"></script>
+</body>
