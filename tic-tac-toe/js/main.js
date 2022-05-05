@@ -40,6 +40,13 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (x < x2) { x += 10; }
             if (y < y2) { y += 10; }
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+
+        }
+        if(x1 <= x2 && y1 >= y2) {
+            if (x < x2) { x += 10; }
+            if(y > y2) {y-=10;}
+            if (x >=x2 && y <=y2) { cancelAnimationFrame(animationLoop); }
+
         }
     }
 
@@ -74,9 +81,9 @@ function checkWinConditions() {
     else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50, 508, 558, 508) }
     else if (arrayIncludes('0O', '3O', '6O')) { drawWinLine(100, 50, 100, 558) }
     else if (arrayIncludes('1O', '4O', '7O')) { drawWinLine(304, 50, 304, 558) }
-    else if (arrayIncludes('20', '50', '80')) { drawWinLine(508, 50, 508, 558) }
-    else if (arrayIncludes('60', '40', '20')) { drawWinLine(100, 508, 510, 90) }
-    else if (arrayIncludes('00', '40', '80')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
     // Checks if it is a draw 
     else if (selectedSquares.length >= 9) {
         audio('./media/tie.mp3');

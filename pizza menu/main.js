@@ -47,10 +47,49 @@ function getTopping(runningTotal, text1) {
         toppingTotal = 0;
     }
     runningTotal = (runningTotal + toppingTotal);
-    console.log("total selected topping items: " + toppingCount);
-    console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
+    vegtables(runningTotal, text1);
+};	
+
+
+// Function that checks what toppings are checked and adds the value to the total   
+function vegtables(runningTotal, text1) {
+    var vegtablesTotal = 0;
+    var selectedvegtables = [];
+    var vegtablesArray = document.getElementsByClassName("vegtables");
+    for (var j = 0; j < vegtablesArray.length; j++) {
+        if (vegtablesArray[j].checked) {
+            selectedvegtables.push(vegtablesArray[j].value);
+            console.log("selected topping item: (" + vegtablesArray[j].value + ")");
+            text1 = text1 + vegtablesArray[j].value + "<br>";
+        }
+    }
+    var vegtablesCount = selectedvegtables.length;
+    if (vegtablesCount > 1) {
+        vegtablesTotal = (vegtablesCount - 1);
+    } else {
+        toppingTotal = 0;
+    }
+    runningTotal = (runningTotal + vegtablesTotal);
+    console.log("total selected topping items: " + vegtablesCount);
+    console.log(vegtablesCount + " topping - 1 free topping = " + "$" + vegtablesTotal + ".00");
     console.log("topping text1: " + text1);
     console.log("Purchase Total: " + "$" + runningTotal + ".00");
     document.getElementById("showText").innerHTML = text1;
     document.getElementById("totalPrice").innerHTML = "</h3>&nbsp;&nbsp;Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
-};	
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
